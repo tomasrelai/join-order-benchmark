@@ -10,6 +10,8 @@ PVLDB Volume 9, No. 3, 2015
 The CSV files used in the paper, which are from May 2013, can be found
 at [http://homepages.cwi.nl/~boncz/job/imdb.tgz](http://homepages.cwi.nl/~boncz/job/imdb.tgz)
 
+The instructions below download a larger 2017 version of the DB.
+
 The license and links to the current version IMDB data set can be
 found at [http://www.imdb.com/interfaces](http://www.imdb.com/interfaces)
 
@@ -25,6 +27,20 @@ found at [http://www.imdb.com/interfaces](http://www.imdb.com/interfaces)
   ```sh
   wget https://bitbucket.org/alberanid/imdbpy/get/5.0.zip
   ```
+
+This requires some installing:
+
+    2.1. Unzip 5.0.zip
+
+    2.2. Use Python2.7 (virtualenv recommended). Do ```pip install SQLAlchemy```
+
+    2.3. Do ```python setup.py install```
+
+    imdbpy2sql.py will be in the bin/ subdirectory.
+
+
+The following steps are indicated for postgres, but should also work for mysql/mariadb (use ``mysql://`` instead).
+If using mysql/mariadb, you may need to do ``pip install MySQL-python```
 
 3. create PostgreSQL database (e.g., name imdbload):
 
